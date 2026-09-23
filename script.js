@@ -1054,7 +1054,25 @@ function displaySearchResults(products) {
     searchResults.innerHTML = "";
 
 
-    if (products.length === 0) {
+   if (products.length === 0) {
+
+    if (currentLanguage === "ar") {
+
+        searchResults.innerHTML = `
+
+            <div class="search-no-results">
+
+                <h3>لم يتم العثور على أي صنف</h3>
+
+                <p>
+                    جرّب البحث باسم أو كلمة أخرى
+                </p>
+
+            </div>
+
+        `;
+
+    } else {
 
         searchResults.innerHTML = `
 
@@ -1070,9 +1088,11 @@ function displaySearchResults(products) {
 
         `;
 
-        return;
-
     }
+
+    return;
+
+}
 
 
     products.forEach(
@@ -1229,28 +1249,58 @@ function displaySearchResults(products) {
 /* =====================================================
    EMPTY SEARCH
 ===================================================== */
+/* =====================================================
+   EMPTY SEARCH
+   يتغير حسب اللغة الحالية
+===================================================== */
 
 function showEmptySearch() {
 
-    searchResults.innerHTML = `
+    if (currentLanguage === "ar") {
 
-        <div class="search-empty">
+        searchResults.innerHTML = `
 
-            <div class="search-empty-icon">
-                ⌕
+            <div class="search-empty">
+
+                <div class="search-empty-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    ابحث في قائمتنا
+                </h3>
+
+                <p>
+                    اعثر على أطعمتك ومشروباتك المفضلة
+                </p>
+
             </div>
 
-            <h3>
-                Search our menu
-            </h3>
+        `;
 
-            <p>
-                Find your favorite food and drinks
-            </p>
+    } else {
 
-        </div>
+        searchResults.innerHTML = `
 
-    `;
+            <div class="search-empty">
+
+                <div class="search-empty-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    Search our menu
+                </h3>
+
+                <p>
+                    Find your favorite food and drinks
+                </p>
+
+            </div>
+
+        `;
+
+    }
 
 }
 
