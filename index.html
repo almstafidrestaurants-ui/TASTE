@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>TASTE | Burgers & More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="style.css">
+</head>
+
+<body>
+
+    <!--  SPLASH SCREEN-->
+    <div id="splashScreen">
+        <div class="splash-content">
+            <img
+                src="images/logo.png"
+                alt="TASTE Logo"
+                class="logo"
+            >
+            <h1>TASTE</h1>
+            <div class="subtitle">
+                BURGERS & MORE
+            </div>
+            <div class="tagline">
+                GOOD FOOD
+                <span>•</span>
+                BETTER MOMENTS
+            </div>
+            <div class="loading-text">
+                Loading your menu...
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--  HOME PAGE -->
+    <main id="homePage" class="hidden">
+        <header class="top-header">
+            <img
+                src="images/logo2.png"
+                alt="TASTE"
+                class="small-logo"
+            >
+            <!-- LANGUAGE -->
+            <button
+                class="language-btn"
+                id="languageBtn"
+            >
+         EN
+                <span>⌄</span>
+
+            </button>
+            <!-- MENU -->
+            <button
+                class="menu-btn"
+                id="menuBtn"
+            >
+                ☰
+            </button>
+        </header>
+
+        <!-- =====================================================
+             HERO
+        ===================================================== -->
+
+        <section class="hero">
+            <div class="hero-image">
+                <img
+                    src="images/burger-home.jpg"
+                    alt="TASTE Burger"
+                >
+            </div>
+            <div class="hero-content">
+                <p
+                    class="small-title"
+                    data-en="WELCOME TO TASTE"
+                    data-ar="أهلاً بكم في TASTE"
+                >
+                    WELCOME TO TASTE
+                </p>
+                <h2
+                    data-en="Delicious Food|Happier People"
+                    data-ar="طعام لذيذ|وأوقات أجمل"
+                >
+                    Delicious Food
+                    <br>
+                    <span>
+                        Happier People
+                    </span>
+                </h2>
+                <p
+                    class="hero-description"
+                    data-en="Fresh ingredients.|Great taste. Always."
+                    data-ar="مكونات طازجة.|طعم رائع دائماً."
+                >
+                    Fresh ingredients.
+                    <br>
+                    Great taste. Always.
+                </p>
+
+                <button
+                    class="view-menu-btn"
+                    id="viewMenuBtn"
+                >
+                    <span
+                        data-en="View Our Menu"
+                        data-ar="شاهد قائمتنا"
+                    >
+                        View Our Menu
+                    </span>
+
+                    <span class="menu-arrow">
+                        →
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!--  QUICK LINKS -->
+       <section class="quick-links">
+
+    <!-- CALL -->
+    <a
+        class="quick-item"
+        href="https://wa.me/96171918022"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="quick-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                19.79 19.79 0 0 1-8.63-3.07
+                19.5 19.5 0 0 1-6-6
+                19.79 19.79 0 0 1-3.07-8.67
+                A2 2 0 0 1 4.11 2h3
+                a2 2 0 0 1 2 1.72
+                12.84 12.84 0 0 0 .7 2.81
+                2 2 0 0 1-.45 2.11L8.09 9.91
+                a16 16 0 0 0 6 6l1.27-1.27
+                a2 2 0 0 1 2.11-.45
+                12.84 12.84 0 0 0 2.81.7
+                A2 2 0 0 1 22 16.92z"/>
+            </svg>
+        </div>
+
+         <span
+            id="callText"
+            data-en="Call"
+            data-ar="اتصل بنا">
+            Call
+        </span>
+    </a>
+
+
+    <!-- LOCATION -->
+    <a
+        class="quick-item"
+        href="https://www.google.com/maps/search/?api=1&query=G3R9%2B462%20Jdaidet%20El%20Joume"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="quick-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 12-9 12S3 17 3 10
+                a9 9 0 1 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+        </div>
+
+            <span
+            id="locationText"
+            data-en="Location"
+            data-ar="الموقع">
+            Location
+        </span>
+    </a>
+
+
+    <!-- HOURS -->
+<button
+    type="button"
+    class="quick-item"
+    id="hoursBtn"
+>
+    <div class="quick-icon">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <polyline points="12 7 12 12 15 14"/>
+        </svg>
+    </div>
+
+      <span
+            id="hoursText"
+            data-en="Hours"
+            data-ar="أوقات العمل">
+            Hours
+        </span>
+</button>
+
+    <!-- INSTAGRAM -->
+    <a
+        class="quick-item"
+        href="#"
+    >
+        <div class="quick-icon">
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+        </div>
+
+         <span
+            id="instagramText"
+            data-en="Instagram"
+            data-ar="إنستغرام">
+            Instagram
+        </span>
+    </a>
+
+</section>
+    </main>
+
+    <!--  SIDE MENU -->
+    <div
+        id="sideMenu"
+        class="side-menu"
+    >
+
+        <button
+            class="close-menu"
+            id="closeMenu"
+        >
+            ×
+        </button>
+
+        <img
+            src="images/logo2.png"
+            class="menu-logo"
+            alt="TASTE"
+        >
+
+        <div class="menu-links">
+            <button
+                id="sideMenuText"
+                data-en="Our Menu"
+                data-ar="قائمتنا"
+            >
+                Our Menu
+            </button>
+
+            <button
+                id="offersText"
+                data-en="Offers"
+                data-ar="العروض"
+            >
+                Offers
+            </button>
+
+            <button
+                id="aboutText"
+                data-en="About Us"
+                data-ar="من نحن"
+            >
+                About Us
+            </button>
+
+            <button
+                id="contactText"
+                data-en="Contact"
+                data-ar="اتصل بنا"
+            >
+                Contact
+            </button>
+
+
+        </div>
+    </div>
+
+    <!-- =============================================================================================
+         MENU CATEGORIES MODAL
+         FULL SCREEN
+    =========================================================================================================== -->
+    <div
+        id="menuModal"
+        class="menu-modal"
+    >
+        <div class="menu-modal-content">
+            <!--  MODAL HEADER-->
+            <div class="menu-modal-header">
+                <div class="menu-modal-title-area">
+                    <span class="menu-modal-small-title">
+                        TASTE
+                    </span>
+                    <h2
+                        id="menuModalTitle"
+                        data-en="Our Menu"
+                        data-ar="قائمتنا"
+                    >
+                        Our Menu
+                    </h2>
+                </div>
+
+
+                <!-- CLOSE -->
+                <button
+                    id="closeMenuModal"
+                    class="close-menu-modal"
+                >
+                    ×
+                </button>
+            </div>
+
+            <!-- =========================================================================================
+                 CATEGORIES
+            ======================================================================================== -->
+
+            <div class="categories-grid">
+                <!-- BURGERS -->
+                <div
+                    class="category-card"
+                    data-category="burgers"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Classic beef.jpeg"
+                            alt="Burgers"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Burgers"
+                            data-ar="برغر"
+                        >
+                            Burgers
+                        </h3>
+                        <span
+                            data-en="8 items"
+                            data-ar="8 صنف"
+                        >
+                            8 items
+                        </span>
+                    </div>
+                </div>
+
+                <!-- SANDWICH-->
+                <div
+                    class="category-card"
+                    data-category="sandwich"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Sandwich.jpeg"
+                            alt="Sandwich"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Sandwich"
+                            data-ar="سندويشات"
+                        >
+                            Sandwich
+                        </h3>
+                        <span
+                            data-en="4 items"
+                            data-ar="4 أصناف"
+                        >
+                            4 items
+                        </span>
+                    </div>
+                </div>
+
+                <!--  PLATTER -->
+                <div
+                    class="category-card"
+                    data-category="platter"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Platter.jpeg"
+                            alt="Platter"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Platter"
+                            data-ar="أطباق"
+                        >
+                            Platter
+                        </h3>
+                        <span
+                            data-en="4 items"
+                            data-ar="4 أصناف"
+                        >
+                            4 items
+                        </span>
+                    </div>
+                </div>
+
+                <!--  APPETIZERS -->
+                <div
+                    class="category-card"
+                    data-category="appetizers"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Appetizers.jpeg"
+                            alt="Appetizers"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Appetizers"
+                            data-ar="مقبلات"
+                        >
+                            Appetizers
+                        </h3>
+                        <span
+                            data-en="5 items"
+                            data-ar="5 أصناف"
+                        >
+                            5 items
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- HOT DRINKS-->
+                <div
+                    class="category-card"
+                    data-category="hot-drinks"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Hot drinks.jpeg"
+                            alt="Hot drinks"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Hot Drinks"
+                            data-ar="مشروبات ساخنة"
+                        >
+                            Hot Drinks
+                        </h3>
+                        <span
+                            data-en="10 items"
+                            data-ar="10 أصناف"
+                        >
+                            10 items
+                        </span>
+                    </div>
+                </div>
+
+
+                <!--  COLD DRINKS-->
+                <div
+                    class="category-card"
+                    data-category="cold-drinks"
+                >
+                    <div class="category-image">
+                        <img
+                            src="images/Cold drinks.jpeg"
+                            alt="Cold drinks"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3
+                            data-en="Cold Drinks"
+                            data-ar="مشروبات باردة"
+                        >
+                            Cold Drinks
+                        </h3>
+                        <span
+                            data-en="15 items"
+                            data-ar="15 أصناف"
+                        >
+                            15 items
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+<!-- ==========================================================================================================
+     PRODUCTS MODAL
+============================================================================================================== -->
+<div id="productsModal" class="products-modal">
+    <div class="products-modal-content">
+
+        <!-- HEADER -->
+
+        <div class="products-header">
+
+            <button
+                id="backToCategories"
+                class="products-back-btn">
+                ←
+            </button>
+
+            <div class="products-title-area">
+                <span>TASTE</span>
+                <h2 id="productsCategoryTitle">
+                    Burgers
+                </h2>
+            </div>
+
+        </div>
+
+
+        <!--BURGERS -->
+
+        <div
+            class="products-category"
+            data-category="burgers">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Classic beef.jpeg"
+                        alt="Classic Burger">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Classic Burger"
+                        data-ar="برغر كلاسيك">
+                        Classic Burger
+                    </h3>
+                    <p
+                        data-en="Beef patty, lettuce, tomato, onion"
+                        data-ar="قطعة لحم بقري، خس، طماطم، بصل">
+                        Beef patty, lettuce, tomato, onion
+                    </p>
+                    <span class="product-price">
+                        $7.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Super Nova.jpeg"
+                        alt="Super Nova">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Super Nova"
+                        data-ar=" سوبر نوفا">
+                        Super Nova
+                    </h3>
+                    <p
+                        data-en="Beef patty, fried cheddar cheese slice, pickles, secret sauce."
+                        data-ar="  شريحة لحم بقري، شريحة جبن شيدر مقلية، مخلل، صلصة سرية ">
+                       Beef patty, fried cheddar cheese slice, pickles, secret sauce.
+                    </p>
+                    <span class="product-price">
+                        $7.50
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Swiss Mushroom Burger.jpeg"
+                        alt="Swiss Mushroom Burger">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Swiss Mushroom Burger"
+                        data-ar="  برجر الفطر والجبن السويسري ">
+                    Swiss Mushroom Burger
+                    </h3>
+                    <p
+                        data-en="  Beef steak, Parmesan cheese, Emmental cheese, mozzarella cheese, fresh mushrooms, onions, cooking cream.  "
+                        data-ar=" شريحة لحم بقري، جبن بارميزان، جبن إيمنتال، جبن موزاريلا، فطر طازج، بصل، كريمة طبخ  ">
+                        Beef patty, Parmesan cheese, Emmental cheese...
+                    </p>
+                    <span class="product-price">
+                        $8.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Beef burger with mozzarella.jpeg"
+                        alt="Beef burger with mozzarella">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Beef burger with mozzarella"
+                        data-ar=" برجر لحم بقري مع الموزاريلا ">
+                    Beef burger with mozzarella
+                    </h3>
+                    <p
+                        data-en="  Beef patty, onion, tomato, pickles, lettuce, mozzarella slice.  "
+                        data-ar=" شريحة لحم بقري، بصل، طماطم، مخلل، خس،  شريحة موزاريلا ">
+                      Beef patty, onion, tomato, pickles, lettuce, mozzarella slice.
+                    </p>
+                    <span class="product-price">
+                        $9.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+       <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/classic grilled chicken breast.jpeg"
+                        alt="classic grilled chicken breast">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="classic grilled chicken breast"
+                        data-ar=" صدر دجاج مشوي كلاسيكي ">
+                   classic grilled chicken breast
+                    </h3>
+                    <p
+                        data-en="  Grilled chicken breast, iceberg lettuce, pickles.  "
+                        data-ar=" صدر دجاج مشوي، خس آيسبرغ، مخلل.  ">
+                    Grilled chicken breast, iceberg lettuce, pickles.
+                    </p>
+                    <span class="product-price">
+                        $9.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+        <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Galaxy Burger.jpeg"
+                        alt="Galaxy Burger">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Galaxy Burger"
+                        data-ar=" جالاكسي برجر ">
+                   Galaxy Burger
+                    </h3>
+                    <p
+                        data-en="  Two pieces of crispy chicken coated in barbecue sauce, with a mozzarella patty, iceberg lettuce, pickles, and the secret sauce.  "
+                        data-ar=" قطعتان من الدجاج المقرمش المغطى بصلصة الباربيكيو  ">
+                  Two pieces of crispy chicken coated in BBQ sauce.
+                    </p>
+                    <span class="product-price">
+                        $12.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+  <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Yuri Gagarin Escalope.jpeg"
+                        alt="Yuri Gagarin Escalope">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Yuri Gagarin Escalope"
+                        data-ar=" إسكالوب يوري غاغارين">
+                   Yuri Gagarin Escalope
+                    </h3>
+                    <p
+                        data-en="  Chicken escalope, coleslaw, ketchup, pickles.  "
+                        data-ar=" إسكالوب دجاج، سلطة كولسلو، كاتشب، مخلل. ">
+              Chicken escalope, coleslaw, ketchup, pickles.
+                    </p>
+                    <span class="product-price">
+                        $10.00
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+           <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Zinger Mix Burger.jpeg"
+                        alt="Zinger Mix Burger">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Zinger Mix Burger"
+                        data-ar=" برجر زينجر ميكس">
+                  Zinger Mix Burger
+                    </h3>
+                    <p
+                        data-en="  Fried chicken breast, lettuce, pickles, mozzarella patty, cheddar sauce. "
+                        data-ar=" صدر دجاج مقلي، خس، مخلل،  برجر الموزاريلا، صوص الشيدر. ">
+             Fried chicken breast, lettuce, pickles, mozzarella patty, cheddar sauce.
+                    </p>
+                    <span class="product-price">
+                        $10.50
+                    </span>
+                </div>
+                <button
+                    class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- SANDWICH -->
+        <div
+            class="products-category"
+            data-category="sandwich">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Tawouk Sandwich.jpeg"
+                        alt="Tawouk Sandwich">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Tawouk Sandwich"
+                        data-ar="ساندويش طاووق">
+                        Tawouk Sandwich
+                    </h3>
+                    <p
+                        data-en="Chicken, coleslaw, pickles, special sauce"
+                        data-ar="دجاج، كولسلو، مخلل، صلصة خاصة">
+                        Chicken, coleslaw, pickles, special sauce
+                    </p>
+                    <span class="product-price">
+                        $4.00
+                    </span>
+                </div>
+                <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="Tawouk Sandwich"
+    data-name-ar="ساندويش طاووق"
+    data-description-en="Chicken, coleslaw, pickles, special sauce"
+    data-description-ar="دجاج، كولسلو، مخلل، صلصة خاصة"
+    data-price="4.00"
+    data-image="images/Tawouk Sandwich.jpeg">
+    +
+</button>
+            </div>
+
+
+                  <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Crispy Sandwich.jpeg"
+                        alt="Crispy Sandwich">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Crispy Sandwich"
+                        data-ar=" ساندويش كريسبي ">
+                        Crispy Sandwich
+                    </h3>
+                    <p
+                        data-en="Two pieces of crispy chicken, coleslaw, ketchup, and pickles."
+                        data-ar=" قطعتان من الدجاج المقرمش (كريسبي)، سلطة كولسلو، كاتشب، ومخلل. ">
+                        Two pieces of crispy chicken, coleslaw, ketchup, and pickles.
+                    </p>
+                    <span class="product-price">
+                        $5.50
+                    </span>
+                </div>
+               <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="  Crispy Sandwich"
+    data-name-ar=" ساندويش كريسبي   "
+    data-description-en="Two pieces of crispy chicken, coleslaw, ketchup, and pickles."
+    data-description-ar="قطعتان من الدجاج المقرمش (كريسبي)، سلطة كولسلو، كاتشب، ومخلل."
+    data-price=" $5.50"
+    data-image="images/Crispy Sandwich.jpeg">
+    +
+</button>
+            </div>
+
+
+                <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Boneless Sandwich.jpeg"
+                        alt="Boneless Sandwich">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Boneless Sandwich"
+                        data-ar=" ساندويش الدجاج ">
+                       Boneless Sandwich
+                    </h3>
+                    <p
+                        data-en="Two pieces of crispy chicken, 3 mozzarella sticks, coleslaw, BBQ sauce, cheddar cheese, pickles."
+                        data-ar=" قطعتان من الدجاج المقرمش، 3 أصابع موزاريلا، سلطة كولسلو،  صلصة الباربيكيو، جبنة شيدر، مخلل. ">
+                       Two pieces of crispy chicken, 3 mozzarella sticks, coleslaw, BBQ sauce, cheddar cheese, pickles.
+                    </p>
+                    <span class="product-price">
+                        $6.50
+                    </span>
+                </div>
+                           <button
+    type="button"
+   class="add-product-btn"
+    data-name-en=" Boneless Sandwich  "
+    data-name-ar=" ساندويش الدجاج    "
+    data-description-en="Two pieces of crispy chicken, 3 mozzarella sticks, coleslaw, BBQ sauce, cheddar cheese, pickles."
+    data-description-ar=" قطعتان من الدجاج المقرمش، 3 أصابع موزاريلا، سلطة كولسلو،  صلصة الباربيكيو، جبنة شيدر، مخلل.  "
+    data-price="    $6.50    "
+    data-image="images/Boneless Sandwich.jpeg">
+    +
+</button>
+            </div>
+
+
+         <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Shawarma sandwich.jpeg"
+                        alt="Shawarma sandwich">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Shawarma sandwich"
+                        data-ar=" ساندويش شاورما ">
+                      Shawarma sandwich
+                    </h3>
+                    <p
+                        data-en="Marinated and roasted chicken shawarma slices, garlic sauce, pickles, and french fries."
+                        data-ar=" شرائح شاورما دجاج متبّلة ومحمّرة، صلصة ثوم، مخلل خيار، بطاطا مقلية. ">
+                      Marinated and roasted chicken shawarma slices, garlic sauce, pickles, and french fries.
+                    </p>
+                    <span class="product-price">
+                        $5.50
+                    </span>
+                </div>
+                         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="    Shawarma sandwich       "
+    data-name-ar="  ساندويش شاورما    "
+    data-description-en="   Marinated and roasted chicken shawarma slices, garlic sauce, pickles, and french fries.  "
+    data-description-ar=" شرائح شاورما دجاج متبّلة ومحمّرة، صلصة ثوم، مخلل خيار، بطاطا مقلية.  "
+    data-price="    $5.50    "
+    data-image="images/Shawarma sandwich.jpeg">
+    +
+</button>
+            </div>
+        </div>
+
+
+        <!-- PLATTER-->
+        <div
+            class="products-category"
+            data-category="platter">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Escalope platter.jpeg"
+                        alt="Escalope Platter">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Escalope Platter"
+                        data-ar="وجبة إسكالوب">
+                        Escalope Platter
+                    </h3>
+                    <p
+                        data-en="Chicken escalope, fries, coleslaw"
+                        data-ar="إسكالوب دجاج، بطاطا، كولسلو">
+                        Chicken escalope, fries, coleslaw
+                    </p>
+                    <span class="product-price">
+                        $12.00
+                    </span>
+                </div>
+                         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="    Escalope Platter      "
+    data-name-ar="  وجبة إسكالوب   "
+    data-description-en="   Chicken escalope, fries, coleslaw  "
+    data-description-ar= "إسكالوب دجاج، بطاطا، كولسلو  "
+    data-price="    $12.00   "
+    data-image="images/Escalope platter.jpeg">
+    +
+</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Crispy Platter.jpeg"
+                        alt="Crispy Platter">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Crispy Platter"
+                        data-ar="وجبة كريسبي">
+                        Crispy Platter
+                    </h3>
+                    <p
+                        data-en="5 crispy chicken pieces, coleslaw, pickles, garlic sauce, french fries."
+                        data-ar="5 قطع كريسبي، سلطة كولسلو، مخلل، صلصة الثوم، بطاطس مقلية.">
+                       5 crispy chicken pieces, coleslaw, pickles, garlic sauce, french fries.
+                    </p>
+                    <span class="product-price">
+                        $12.00
+                    </span>
+                </div>
+                         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="   Crispy Platter     "
+    data-name-ar=" وجبة كريسبي  "
+    data-description-en="     5 crispy chicken pieces, coleslaw, pickles, garlic sauce, french fries.  "
+    data-description-ar= "  5 قطع كريسبي، سلطة كولسلو، مخلل، صلصة الثوم، بطاطس مقلية.  "
+    data-price="    $12.00   "
+    data-image="images/Crispy Platter.jpeg">
+    +
+</button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Chicken shawarma Platter.jpeg"
+                        alt="Chicken shawarma Platter">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Chicken shawarma Platter"
+                        data-ar="وجبة شاورما دجاج  ">
+                        Chicken shawarma Platter
+                    </h3>
+                    <p
+                        data-en="Chicken shawarma meal, french fries, coleslaw, garlic sauce, pickles, and fresh bread."
+                        data-ar="وجبة شاورما دجاج، بطاطا مقلية، سلطة كولسلو، صلصة الثوم، مخلل، وخبز طازج.">
+                     Chicken shawarma meal, french fries, coleslaw, garlic sauce, pickles, and fresh bread.
+                    </p>
+                    <span class="product-price">
+                        $12.00
+                    </span>
+                </div>
+                      <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="             Chicken shawarma Platter              "
+    data-name-ar="    وجبة شاورما دجاج        "
+    data-description-en="      Chicken shawarma meal, french fries, coleslaw, garlic sauce, pickles, and fresh bread.      "
+    data-description-ar= "  وجبة شاورما دجاج، بطاطا مقلية، سلطة كولسلو، صلصة الثوم، مخلل، وخبز طازج.  "
+    data-price="    $12.00   "
+    data-image="images/Crispy Platter.jpeg">
+    +
+</button>
+            </div>
+
+    <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Grilled Steak Platter.jpeg"
+                        alt="Grilled Steak Platter">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Grilled Steak Platter"
+                        data-ar="    طبق ستيك مشوي   ">
+                        Grilled Steak Platter
+                    </h3>
+                    <p
+                        data-en="Grilled steak, seasoned potato wedges, grilled vegetables, and special steak sauce."
+                        data-ar=" ستيك لحم مشوي، بطاطا ودجز متبّلة، خضار مشوية، وصلصة الستيك الخاصة. ">
+                    Grilled steak, seasoned potato wedges, grilled vegetables, and special steak sauce.
+                    </p>
+                    <span class="product-price">
+                        $12.00
+                    </span>
+                </div>
+                      <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="            Grilled Steak Platter              "
+    data-name-ar="    طبق ستيك مشوي        "
+    data-description-en="        Grilled steak, seasoned potato wedges, grilled vegetables, and special steak sauce.      "
+    data-description-ar= "  ستيك لحم مشوي، بطاطا ودجز متبّلة، خضار مشوية، وصلصة الستيك الخاصة.  "
+    data-price="    $12.00   "
+    data-image="images/Grilled Steak Platter.jpeg">
+    +
+</button>
+            </div>
+        </div>
+
+
+        <!-- APPETIZERS -->
+        <div
+            class="products-category"
+            data-category="appetizers">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Mozzarella Sticks.jpeg"
+                        alt="Mozzarella Sticks">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Mozzarella Sticks"
+                        data-ar="أصابع موزاريلا">
+                        Mozzarella Sticks
+                    </h3>
+                    <p
+                        data-en="4 mozzarella sticks with sauce"
+                        data-ar="4 أصابع موزاريلا مع الصلصة">
+                        4 mozzarella sticks with sauce
+                    </p>
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+              <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="             Mozzarella Sticks             "
+    data-name-ar="    أصابع موزاريلا       "
+    data-description-en="         4 mozzarella sticks with sauce      "
+    data-description-ar= "  4 أصابع موزاريلا مع الصلصة  "
+    data-price="    $5.00   "
+    data-image="images/Mozzarella Sticks.jpeg">
+    +
+</button>
+            </div>
+
+                     <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Curly Fries.jpeg"
+                        alt="Curly Fries">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Curly Fries"
+                        data-ar="بطاطس مقلية لولبية  ">
+                       Curly Fries
+                    </h3>
+                    <p
+                        data-en="uranus sauce"
+                        data-ar="صلصة أورانوس">
+                        uranus sauce
+                    </p>
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+          <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="            Curly Fries            "
+    data-name-ar="    بطاطس مقلية لولبية        "
+    data-description-en="         uranus sauce      "
+    data-description-ar= "  صلصة أورانوس   "
+    data-price="    $5.00   "
+    data-image="images/Curly Fries.jpeg">
+    +
+</button>
+            </div>
+
+
+          <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Cheddar balls.jpeg"
+                        alt="Cheddar balls">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Cheddar balls"
+                        data-ar="   كرات الشيدر    ">
+                      Cheddar balls
+                    </h3>
+                    <p
+                        data-en=" 5 peices served with uranus sauce  "
+                        data-ar="  5 قطع تُقدم مع صلصة أورانوس  ">
+                      5 peices served with uranus sauce
+                    </p>
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="            Cheddar balls           "
+    data-name-ar="    كرات الشيدر        "
+    data-description-en="        5 peices served with uranus sauce     "
+    data-description-ar= "  5 قطع تُقدم مع صلصة أورانوس   "
+    data-price="    $5.00   "
+    data-image="images/Cheddar balls.jpeg">
+    +
+</button>
+            </div>
+
+
+             <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Small Fries Plate.jpeg"
+                        alt="Small Fries Plate">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Small Fries Plate"
+                        data-ar="   بطاطس مقلية صغيرة   ">
+                     Small Fries Plate
+                    </h3>
+                    <p
+                        data-en=" Fries, sauce  "
+                        data-ar="  بطاطس مقلية، صلصة ">
+                      Fries, sauce
+                    </p>
+                    <span class="product-price">
+                        $3.00
+                    </span>
+                </div>
+         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="             Small Fries Plate          "
+    data-name-ar="   بطاطس مقلية صغيرة        "
+    data-description-en="       Fries, sauce    "
+    data-description-ar= "  بطاطس مقلية، صلصة   "
+    data-price="    $3.00   "
+    data-image="Small Fries Plate.jpeg">
+    +
+</button>
+            </div>
+
+            
+             <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Big Fries Plate.jpeg"
+                        alt="Big Fries Plate">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Big Fries Plate"
+                        data-ar="    بطاطس مقلية كبير   ">
+                      Big Fries Plate
+                    </h3>
+                    <p
+                        data-en=" Fries, sauce "
+                        data-ar="  بطاطس مقلية، صلصة ">
+                      Fries, sauce
+                    </p>
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+         <button
+    type="button"
+   class="add-product-btn"
+    data-name-en="              Big Fries Plate        "
+    data-name-ar="    بطاطس مقلية كبير       "
+    data-description-en="       Fries, sauce    "
+    data-description-ar= "  بطاطس مقلية، صلصة   "
+    data-price="    $5.00   "
+    data-image="Small Fries Plate.jpeg">
+    +
+</button>
+            </div>
+
+
+        </div>
+
+
+        <!--  HOT DRINKS -->
+        <div
+            class="products-category"
+            data-category="hot-drinks">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Espresso.jpg"
+                        alt="Espresso">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Espresso"
+                        data-ar="إسبريسو">
+                        Espresso
+                    </h3>          
+                    <span class="product-price">
+                        $1.50
+                    </span>
+                </div>
+              <button
+    type="button"
+    class="add-product-btn"
+    data-type="drink"
+    data-name-en="Espresso"
+    data-name-ar="إسبريسو"
+    data-description-en=""
+    data-description-ar=""
+    data-price="1.50"
+    data-image="images/Espresso.jpg">
+    +
+</button>
+            </div>
+
+
+                  <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Double Espresso.jpg"
+                        alt="Double Espresso">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Double Espresso"
+                        data-ar="دبل إسبريسو">
+                        Double Espresso
+                    </h3>          
+                    <span class="product-price">
+                        $2.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Cappuccino(sachets).jpg"
+                        alt="Cappuccino(sachets)">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Cappuccino(sachets)"
+                        data-ar="كابتشينو (أكياس)">
+                        Cappuccino(sachets)
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+       <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Cappuccino.jpg"
+                        alt="Cappuccino">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Cappuccino"
+                        data-ar=" كابتشينو ">
+                        Cappuccino
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Caramel macchiato.jpg"
+                        alt="Caramel macchiato">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Caramel macchiato"
+                        data-ar="كاراميل ماكياتو ">
+                       Caramel macchiato
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Cortado.jpg"
+                        alt="Cortado">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Cortado"
+                        data-ar=" كورتادو ">
+                       Cortado
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Latte.jpeg"
+                        alt="Latte">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Latte"
+                        data-ar=" لاتيه ">
+                     Latte
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Matcha_ vanilla  matcha.jpg"
+                        alt="Matcha_ vanilla  matcha">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Matcha_ vanilla  matcha"
+                        data-ar="ماتشا - ماتشا بالفانيليا">
+                       Matcha_ vanilla  matcha
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+                    <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Mocha.jpg"
+                        alt="Mocha">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Mocha"
+                        data-ar=" موكا  ">
+                       Mocha
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Spanish latte.jpg"
+                        alt="Spanish latte">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Spanish latte"
+                        data-ar=" لاتيه إسباني  ">
+                       Spanish latte
+                    </h3>          
+                    <span class="product-price">
+                        $5.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+        </div>
+
+
+        <!--  COLD DRINKS -->
+        <div
+            class="products-category"
+            data-category="cold-drinks">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Pepsi.jpg"
+                        alt="Pepsi">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Pepsi"
+                        data-ar=" بيبسي ">
+                        Pepsi
+                    </h3>                   
+                    <span class="product-price">
+                        $1.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+           <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/7up.jpg"
+                        alt="7up">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="7up"
+                        data-ar=" سفن أب ">
+                        7up
+                    </h3>                
+                    <span class="product-price">
+                        $1.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+           <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Mirinda.jpg"
+                        alt="Mirinda">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Mirinda"
+                        data-ar=" ميرندا ">
+                        Mirinda
+                    </h3>                
+                    <span class="product-price">
+                        $1.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+       <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Boom Boom.jpeg"
+                        alt="Boom Boom">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Boom Boom"
+                        data-ar=" بوم بوم ">
+                        Boom Boom
+                    </h3>                
+                    <span class="product-price">
+                        $2.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+       <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Dark Blue.jpeg"
+                        alt="Dark Blue">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Dark Blue"
+                        data-ar=" دارك بلو   ">
+                        Dark Blue
+                    </h3>                
+                    <span class="product-price">
+                        $3.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+       <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Red Bull.jpeg"
+                        alt="Red Bull">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Red Bull"
+                        data-ar=" ريد بول  ">
+                       Red Bull
+                    </h3>                
+                    <span class="product-price">
+                        $3.00
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+                   <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/water rim.jpeg"
+                        alt="water">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="water"
+                        data-ar=" ماء ">
+                       water
+                    </h3>                
+                    <span class="product-price">
+                        $0.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+      <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Iced latte.jpg"
+                        alt="Iced latte">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Iced latte"
+                        data-ar=" لاتيه مثلج ">
+                       Iced latte
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+
+             <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/iced matcha  strawberry.jpg"
+                        alt="iced matcha  strawberry">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="iced matcha  strawberry"
+                        data-ar=" ماتشا مثلجة بالفراولة ">
+                       iced matcha  strawberry
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+
+             <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/iced matcha Vanilla.jpg"
+                        alt="iced matcha Vanilla">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="iced matcha Vanilla"
+                        data-ar=" ماتشا مثلجة بالفانيليا ">
+                       iced matcha Vanilla
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Iced tea lemon.jpg"
+                        alt="Iced tea lemon">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Iced tea lemon"
+                        data-ar=" شاي مثلج بالليمون ">
+                       Iced tea lemon
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Iced tea mango.jpg"
+                        alt="Iced tea mango">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Iced tea mango"
+                        data-ar=" شاي مثلج بنكهة المانجو ">
+                       Iced tea mango
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+           <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Iced tea passion.jpg"
+                        alt="Iced tea passion">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Iced tea passion"
+                        data-ar=" شاي مثلج بالباشن  ">
+                       Iced tea passion
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+           <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/iced tea Strawberry.jpg"
+                        alt="iced tea Strawberry">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="iced tea Strawberry"
+                        data-ar=" شاي مثلج بالفراولة ">
+                       iced tea Strawberry
+                    </h3>                
+                    <span class="product-price">
+                        $3.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+          <div class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/Mango smoothie.jpg"
+                        alt="Mango smoothie">
+                </div>
+                <div class="product-info">
+                    <h3
+                        data-en="Mango smoothie"
+                        data-ar=" سموذي المانجو ">
+                       Mango smoothie
+                    </h3>                
+                    <span class="product-price">
+                        $2.50
+                    </span>
+                </div>
+                <button class="add-product-btn">
+                    +
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- -================================Bottom Navigation ===================================-->
+<nav id="bottomNav" class="bottom-nav">
+
+    <button class="bottom-nav-item active" id="homeNavBtn">
+
+        <span class="nav-icon">⌂</span>
+
+        <span
+    data-en="Home"
+    data-ar="الرئيسية">
+    Home
+</span>
+
+    </button>
+
+
+    <button class="bottom-nav-item" id="searchNavBtn">
+
+        <span class="nav-icon">⌕</span>
+
+     <span
+    data-en="Search"
+    data-ar="البحث">
+    Search
+</span>
+
+    </button>
+
+
+    <button class="bottom-nav-item" id="cartNavBtn">
+
+        <span class="nav-icon">🛒</span>
+
+       <span
+    data-en="Cart"
+    data-ar="السلة">
+    Cart
+</span>
+
+        <span id="cartCount" class="cart-count">0</span>
+
+    </button>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAILS MODAL
+===================================================== -->
+
+<div id="productDetailsModal" class="product-details-modal">
+
+    <div class="product-details-content">
+
+        <!-- Close -->
+        <button
+            type="button"
+            id="closeProductDetails"
+            class="product-details-close">
+            ×
+        </button>
+
+        <!-- Product Image -->
+        <div class="product-details-image">
+            <img
+                id="productDetailsImage"
+                src=""
+                alt="">
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-details-info">
+
+            <div class="product-details-header">
+
+                <div>
+
+                    <h2 id="productDetailsName"></h2>
+
+                    <p id="productDetailsDescription"></p>
+
+                </div>
+
+                <div
+                    id="productDetailsPrice"
+                    class="product-details-price">
+                </div>
+
+            </div>
+
+
+            <!-- SIZE -->
+<div class="product-option" id="sizeOptionSection">
+
+               <h3
+    data-en="Size"
+    data-ar="الحجم">
+    Size
+</h3>
+
+                <div class="size-options">
+
+                    <button
+                        type="button"
+                        class="size-option active"
+                        data-price="0">
+
+                        <span
+    data-en="Regular"
+    data-ar="عادي">
+    Regular
+</span>
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        data-price="2">
+
+                       <span
+    data-en="Large"
+    data-ar="كبير">
+    Large
+</span>
++ $2.00
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXTRAS -->
+<div class="product-option" id="extrasOptionSection">
+
+              <h3
+    data-en="Add Extras"
+    data-ar="إضافات">
+    Add Extras
+</h3>
+
+                <label class="extra-option">
+
+                    <span>
+
+                        <input
+                            type="checkbox"
+                            data-extra-price="1">
+
+                     <span
+    data-en="Extra Cheese"
+    data-ar="جبنة إضافية">
+    Extra Cheese
+</span>
+
+                    </span>
+
+                    <strong>+$1.00</strong>
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+
+                        <input
+                            type="checkbox"
+                            data-extra-price="1.50">
+
+                     <span
+    data-en="Bacon"
+    data-ar="بيكون">
+    Bacon
+</span>
+
+                    </span>
+
+                    <strong>+$1.50</strong>
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+
+                        <input
+                            type="checkbox"
+                            data-extra-price="2">
+
+                       <span
+    data-en="Extra Patty"
+    data-ar="قطعة لحم إضافية">
+    Extra Patty
+</span>
+
+                    </span>
+
+                    <strong>+$2.00</strong>
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+
+                        <input
+                            type="checkbox"
+                            data-extra-price="0.50">
+
+                        <span
+    data-en="Jalapeño"
+    data-ar="هالابينو">
+    Jalapeño
+</span>
+
+                    </span>
+
+                    <strong>+$0.50</strong>
+
+                </label>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-box">
+
+                <button
+                    type="button"
+                    id="decreaseQuantity">
+                    −
+                </button>
+
+                <span id="productQuantity">1</span>
+
+                <button
+                    type="button"
+                    id="increaseQuantity">
+                    +
+                </button>
+
+            </div>
+
+
+            <!-- ADD TO CART -->
+
+            <button
+                type="button"
+                id="addProductToCart"
+                class="add-to-cart-btn">
+
+               <span
+    data-en="Add to Cart"
+    data-ar="أضف إلى السلة">
+    Add to Cart
+</span>
+
+                <strong id="productTotalPrice">
+                    $0.00
+                </strong>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- =====================================================
+     CART MODAL
+===================================================== -->
+
+<div id="cartModal" class="cart-modal">
+
+    <div class="cart-modal-content">
+
+        <!-- HEADER -->
+        <div class="cart-header">
+
+            <h2
+                data-en="Your Cart"
+                data-ar="سلتك">
+                Your Cart
+            </h2>
+
+            <button
+                type="button"
+                id="closeCartModal"
+                class="cart-close">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- CLEAR ALL -->
+
+        <button
+            type="button"
+            id="clearCartBtn"
+            class="clear-cart-btn"
+            data-en="Clear All"
+            data-ar="إفراغ السلة">
+            Clear All
+        </button>
+
+
+        <!-- CART ITEMS -->
+
+        <div
+            id="cartItems"
+            class="cart-items">
+
+            <!-- المنتجات رح تنضاف هون تلقائياً -->
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="cart-summary">
+
+            <div>
+                <span
+                    data-en="Subtotal"
+                    data-ar="المجموع الفرعي">
+                    Subtotal
+                </span>
+
+                <strong id="cartSubtotal">
+                    $0.00
+                </strong>
+            </div>
+
+
+            <div>
+                <span
+                    data-en="Tax"
+                    data-ar="الضريبة">
+                    Tax
+                </span>
+
+                <strong id="cartTax">
+                    $0.00
+                </strong>
+            </div>
+
+
+            <div class="cart-total">
+
+                <span
+                    data-en="Total"
+                    data-ar="المجموع">
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDER TYPE -->
+
+        <div class="order-type-section">
+
+            <h3
+                data-en="How would you like to order?"
+                data-ar="كيف تريد استلام طلبك؟">
+                How would you like to order?
+            </h3>
+
+
+            <div class="order-type-buttons">
+
+                <button
+                    type="button"
+                    class="order-type-btn active"
+                    data-order="Dine In">
+
+                    🍴
+                    <span
+                        data-en="Dine In"
+                        data-ar="داخل المطعم">
+                        Dine In
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="order-type-btn"
+                    data-order="Take Away">
+
+                    🛍
+                    <span
+                        data-en="Take Away"
+                        data-ar="سفري">
+                        Take Away
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="order-type-btn"
+                    data-order="Delivery">
+
+                    🛵
+                    <span
+                        data-en="Delivery"
+                        data-ar="توصيل">
+                        Delivery
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLE NUMBER -->
+
+        <div class="table-section">
+
+            <label
+                for="tableNumber"
+                data-en="Table Number (Optional)"
+                data-ar="رقم الطاولة (اختياري)">
+                Table Number (Optional)
+            </label>
+
+          <input
+    type="text"
+    id="tableNumber"
+    data-placeholder-en="Table 12"
+    data-placeholder-ar="رقم الطاولة"
+    placeholder="Table 12">
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+
+<button
+    type="button"
+    id="whatsappOrderBtn"
+    class="whatsapp-order-btn">
+
+    <img
+        src="images/Whatsapp.png"
+        alt="WhatsApp"
+        class="whatsapp-icon">
+
+    <span
+        data-en="Order via WhatsApp"
+        data-ar="إرسال الطلب عبر واتساب">
+        Order via WhatsApp
+    </span>
+
+</button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SEARCH MODAL
+===================================================== -->
+
+<div id="searchModal" class="search-modal">
+
+    <div class="search-modal-content">
+
+        <!-- HEADER -->
+
+        <div class="search-header">
+
+            <button
+                type="button"
+                id="closeSearch"
+                class="search-close">
+                ×
+            </button>
+
+          <h2
+    data-en="Search"
+    data-ar="البحث">
+    Search
+</h2>
+
+        </div>
+
+
+        <!-- SEARCH INPUT -->
+
+        <div class="search-input-box">
+
+            <span class="search-input-icon">⌕</span>
+
+          <input
+    type="text"
+    id="searchInput"
+    placeholder="Search for a dish..."
+    data-placeholder-en="Search for a dish..."
+    data-placeholder-ar="ابحث عن صنف..."
+    autocomplete="off">
+
+            <button
+                type="button"
+                id="clearSearch"
+                class="clear-search">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div
+            id="searchResults"
+            class="search-results">
+
+            <div class="search-empty">
+
+                <div class="search-empty-icon">
+                    ⌕
+                </div>
+
+             <h3
+    data-en="Search our menu"
+    data-ar="ابحث في قائمتنا">
+    Search our menu
+</h3>
+
+<p
+    data-en="Find your favorite food and drinks"
+    data-ar="اعثر على طعامك ومشروباتك المفضلة">
+    Find your favorite food and drinks
+</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- HOURS MODAL -->
+<!-- HOURS MODAL -->
+
+<div id="hoursModal" class="hours-modal">
+
+    <div class="hours-box">
+
+        <button
+            id="closeHours"
+            class="hours-close"
+            type="button">
+            ×
+        </button>
+
+        <div class="hours-small-title">
+            TASTE
+        </div>
+
+        <h3
+            data-en="Opening Hours"
+            data-ar="أوقات العمل">
+            Opening Hours
+        </h3>
+
+        <div class="hours-line"></div>
+
+        <div class="hours-time">
+
+            <span
+                data-en="Every Day"
+                data-ar="كل يوم">
+                Every Day
+            </span>
+
+            <strong
+                dir="ltr"
+                data-en="10:00 AM – 2:00 PM"
+                data-ar="10:00 صباحاً – 2:00 مساءً">
+                10:00 AM – 2:00 PM
+            </strong>
+
+        </div>
+
+        <div
+            class="hours-status"
+            data-en="We are happy to serve you!"
+            data-ar="يسعدنا خدمتكم!">
+            We are happy to serve you!
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,3622 @@
+/* =========================================================
+   TASTE QR MENU
+   MOBILE ONLY
+   Maximum Width: 430px
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+    color: #fff;
+
+    font-family: "Cairo", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MOBILE CONTAINER
+   الموقع كله يبقى بعرض الموبايل
+========================================================= */
+
+#splashScreen,
+#homePage {
+
+    width: 100%;
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   SPLASH SCREEN
+========================================================= */
+
+#splashScreen {
+
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    max-width: 430px;
+
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #21180d 0%,
+            #0b0906 38%,
+            #000 78%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+
+#splashScreen.hide {
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.splash-content {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+.splash-content .logo {
+
+    width: 100px;
+
+    height: auto;
+
+    margin-bottom: 20px;
+}
+
+
+.splash-content h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    letter-spacing: 6px;
+
+    color: #e5b85c;
+
+    margin-bottom: 8px;
+}
+
+
+.splash-content .subtitle {
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #fff;
+
+    margin-bottom: 12px;
+}
+
+
+.splash-content .tagline {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+}
+
+
+.splash-content .tagline span {
+
+    color: #d6a747;
+
+    margin: 0 5px;
+}
+
+
+.loading-text {
+
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    color: #999;
+}
+
+
+.loading-bar {
+
+    width: 180px;
+
+    height: 3px;
+
+    margin: 12px auto 0;
+
+    background: #2a2a2a;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.loading-progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #dcae4e;
+
+    animation: loading 2.4s linear forwards;
+}
+
+
+@keyframes loading {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+#homePage {
+
+    position: relative;
+
+    background: #000;
+
+    overflow-x: hidden;
+}
+
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    height: 76px;
+
+    background: #050505;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    margin: 0 auto;
+
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.small-logo {
+
+    width: 62px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTON
+========================================================= */
+
+.language-btn {
+
+    position: absolute;
+
+    right: 68px;
+
+    top: 16px;
+
+    width: 64px;
+
+    height: 44px;
+
+    border-radius: 13px;
+
+    border: 1px solid #6b4d18;
+
+    background: #080706;
+
+    color: #e5b85c;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.language-btn span {
+
+    margin-left: 3px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-btn {
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 13px;
+
+    border: 1px solid #6b4d18;
+
+    background: #080706;
+
+    color: #e5b85c;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    width: 100%;
+
+    position: relative;
+
+    background: #000;
+
+    overflow: hidden;
+}
+
+
+/* Hero Image */
+
+.hero-image {
+
+    width: 100%;
+
+    height: 390px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.hero-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05) 35%,
+            rgba(0,0,0,0.15) 50%,
+            rgba(0,0,0,0.95) 100%
+        );
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    margin-top: -75px;
+
+    padding: 0 20px 35px;
+
+    z-index: 2;
+}
+
+
+.small-title {
+
+    color: #e0aa42;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+
+.hero h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 39px;
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h2 span {
+
+    color: #e5ad45;
+}
+
+
+.hero-description {
+
+    color: #ddd;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   VIEW MENU BUTTON
+========================================================= */
+
+.view-menu-btn {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2c75e,
+            #c99835
+        );
+
+    color: #111;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(211,160,55,0.18);
+}
+
+
+.view-menu-btn span {
+
+    margin-left: 12px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.quick-links {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    padding: 0 20px 85px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+.quick-item {
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* المربع حول الأيقونة */
+
+.quick-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    border: 1px solid #654a19;
+
+    border-radius: 13px;
+
+    background: #050505;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+
+/* الأيقونة */
+
+.quick-icon svg {
+
+    width: 21px;
+
+    height: 21px;
+
+    fill: none;
+
+    stroke: #e5b85c;
+
+    stroke-width: 1.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* النص */
+
+.quick-item > span {
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+/* إزالة خط الرابط */
+
+.quick-item,
+.quick-item:visited,
+.quick-item:hover,
+.quick-item:active {
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* عند الضغط */
+
+.quick-item:active .quick-icon {
+
+    transform: scale(0.94);
+
+    border-color: #e5b85c;
+}
+
+/* =========================================================
+   SIDE MENU
+========================================================= */
+/* =========================================================
+   SIDE MENU
+   يبقى داخل إطار الموبايل
+========================================================= */
+
+.side-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 50%;
+
+    right: auto;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 100vh;
+
+    background: #090806;
+
+    z-index: 5000;
+
+    box-sizing: border-box;
+
+    /* مخفية بالكامل عند البداية */
+    transform: translateX(100vw);
+
+    visibility: hidden;
+
+    transition:
+        transform 0.35s ease,
+        visibility 0s linear 0.35s;
+
+    padding: 25px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SIDE MENU OPEN
+========================================================= */
+
+.side-menu.open {
+
+    transform: translateX(-50%);
+
+    visibility: visible;
+
+    transition:
+        transform 0.35s ease,
+        visibility 0s linear 0s;
+}
+
+
+.close-menu {
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    border: 1px solid #76551b;
+
+    background: transparent;
+
+    color: #e5b85c;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+.menu-logo {
+
+    display: block;
+
+    width: 90px;
+
+    margin: 50px auto 50px;
+}
+
+
+.menu-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.menu-links button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: 1px solid #493714;
+
+    border-radius: 12px;
+
+    background: #0d0b08;
+
+    color: #fff;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================================================================
+   MENU MODAL
+   مهم جداً:
+   المودال يبقى بعرض الموبايل فقط
+=========================================================================================================== */
+/* =========================================================
+   MENU MODAL
+   MOBILE ONLY
+========================================================= */
+
+.menu-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #17120c 0%,
+            #080706 45%,
+            #000000 100%
+        );
+
+     z-index: 9000;
+    box-sizing: border-box;
+
+    padding-bottom: 80px;
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* المودال مفتوح */
+
+.menu-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.menu-modal-content {
+    width: 100%;
+    max-width: 430px;
+
+    min-height: 100dvh;
+
+    margin: 0 auto;
+
+    padding:
+        18px
+        10px
+        35px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.menu-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+    padding: 0 2px;
+}
+
+
+/* العنوان */
+
+.menu-modal-small-title {
+    display: block;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #d9a441;
+
+    margin-bottom: 3px;
+
+    text-transform: uppercase;
+}
+
+
+#menuModalTitle {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #f3d078;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-menu-modal {
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid #8d641d;
+
+    background:
+        rgba(12, 10, 7, 0.9);
+
+    color: #e8b84d;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.close-menu-modal:active {
+    transform: scale(0.90);
+
+    background: #1d160b;
+
+    border-color: #d9a441;
+}
+
+
+/* =========================================================
+   CATEGORIES GRID
+========================================================= */
+
+.categories-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+ padding-bottom: 85px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 0.88;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(191, 143, 48, 0.55);
+
+    background: #0b0907;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.category-card:active {
+
+    transform: scale(0.97);
+
+    border-color: #e3b64f;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.category-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.category-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.category-card:active
+.category-image img {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+   هون السر حتى الكتابة تكون واضحة
+========================================================= */
+
+.category-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+
+            rgba(0, 0, 0, 0.00) 35%,
+
+            rgba(0, 0, 0, 0.12) 48%,
+
+            rgba(0, 0, 0, 0.72) 76%,
+
+            rgba(0, 0, 0, 0.94) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CATEGORY INFO
+========================================================= */
+
+.category-info {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2;
+
+    padding:
+        28px
+        11px
+        10px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0)
+        );
+}
+
+
+/* =========================================================
+   CATEGORY NAME
+========================================================= */
+
+.category-info h3 {
+
+    margin: 0 0 1px 0;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.category-info span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* الخط الذهبي الصغير */
+
+.category-info span::before {
+
+    content: "";
+
+    width: 13px;
+    height: 1px;
+
+    background: #c99532;
+
+    display: inline-block;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   ARABIC
+========================================================= */
+
+html[dir="rtl"] .menu-modal {
+
+    direction: rtl;
+}
+
+
+html[dir="rtl"] .menu-modal-header {
+
+    direction: rtl;
+}
+
+
+html[dir="rtl"] .category-info {
+
+    text-align: right;
+}
+
+
+html[dir="rtl"] .category-info span {
+
+    justify-content: flex-start;
+}
+
+
+
+/* =====================================================
+   BOTTOM NAVIGATION
+   شريط التنقل السفلي
+===================================================== */
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 58px;
+
+    background: rgba(10, 9, 7, 0.98);
+
+    border-top: 1px solid #5d4612;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    z-index: 10000;
+
+    padding-bottom: env(safe-area-inset-bottom);
+
+    box-sizing: border-box;
+}
+
+/* مخفي أثناء شاشة التحميل */
+
+#bottomNav {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+/* يظهر بعد انتهاء شاشة التحميل */
+
+#bottomNav.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* أزرار الشريط */
+
+.bottom-nav-item {
+
+    position: relative;
+
+    width: 33.33%;
+
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+/* الأيقونة */
+
+.nav-icon {
+
+    font-size: 23px;
+
+    line-height: 1;
+
+}
+
+
+/* الزر المحدد */
+
+.bottom-nav-item.active {
+
+    color: #d9a928;
+
+}
+
+
+/* رقم السلة */
+
+.cart-count {
+
+    position: absolute;
+
+    top: 14px;
+
+    margin-left: 25px;
+
+    min-width: 16px;
+
+    height: 16px;
+
+    padding: 0 4px;
+
+    border-radius: 20px;
+
+    background: #d9a928;
+
+    color: #000;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+/* =====================================================
+   PRODUCTS MODAL
+===================================================== */
+
+.products-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #0b0b0b;
+
+    z-index: 12000;
+
+    overflow-y: auto;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* عندما يفتح */
+
+.products-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* محتوى المودال */
+
+.products-modal-content {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #0b0b0b 35%,
+            #080808 100%
+        );
+
+    padding: 14px 14px 90px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PRODUCTS HEADER
+===================================================== */
+
+.products-header {
+
+    position: relative;
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+
+/* زر الرجوع */
+
+.products-back-btn {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* عنوان القسم */
+
+.products-title-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.products-title-area span {
+
+    color: #d9a928;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 1px;
+}
+
+
+.products-title-area h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   PRODUCTS LIST
+===================================================== */
+
+.products-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* ====================================================================================================
+   PRODUCT CARD
+================================================================================================================= */
+
+.product-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 105px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1b1b1b,
+            #111111
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+/* صورة المنتج */
+
+.product-image {
+
+    width: 88px;
+
+    height: 88px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* معلومات المنتج */
+
+.product-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding:
+        4px
+        10px
+        4px
+        10px;
+}
+
+
+.product-info h3 {
+
+    margin: 0 0 3px;
+
+    color: #ffffff;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+.product-description {
+
+    margin: 0;
+
+    color: #b9b9b9;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* السعر */
+
+.product-price {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #e4b43c;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* زر الإضافة */
+
+.add-product-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f0bd55;
+
+    color: #111111;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+
+.add-product-btn:active {
+
+    transform: scale(0.9);
+
+    background: #dca83f;
+}
+
+.products-category {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* =====================================================
+   PRODUCT DETAILS MODAL
+===================================================== */
+
+.product-details-modal {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    background: #000;
+
+    z-index: 99999;
+
+    display: none;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* عند فتح تفاصيل المنتج */
+
+.product-details-modal.open {
+
+    display: block;
+}
+
+
+/* محتوى تفاصيل المنتج */
+
+.product-details-content {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100dvh;
+
+    margin: 0 auto;
+
+    background: #0b0b0b;
+
+    position: relative;
+
+    z-index: 100000;
+
+    padding-bottom: 25px;
+}
+
+/* =====================================================
+   منع الصفحة الموجودة بالخلف من الحركة
+   عندما تكون تفاصيل المنتج مفتوحة
+===================================================== */
+
+body.modal-open {
+
+    overflow: hidden;
+}
+/* ================= IMAGE ================= */
+
+.product-details-image {
+
+    width: 100%;
+
+    height: 320px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.product-details-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 120px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #0b0b0b
+        );
+
+}
+
+.product-details-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ================= CLOSE ================= */
+
+.product-details-close {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid #c99624;
+
+    background: rgba(0,0,0,.65);
+
+    color: #f4c35b;
+
+    font-size: 25px;
+
+    z-index: 10;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= INFO ================= */
+
+.product-details-info {
+
+    padding: 0 20px 25px;
+
+    margin-top: -35px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.product-details-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+}
+
+.product-details-header h2 {
+
+    margin: 0 0 8px;
+
+    color: #fff;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+}
+
+.product-details-header p {
+
+    margin: 0;
+
+    color: #d0d0d0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+.product-details-price {
+
+    color: #f4c35b;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+/* ================= OPTIONS ================= */
+
+.product-option {
+
+    margin-top: 25px;
+
+}
+
+.product-option h3 {
+
+    margin: 0 0 12px;
+
+    color: #fff;
+
+    font-size: 15px;
+
+}
+
+
+/* ================= SIZE ================= */
+
+.size-options {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.size-option {
+
+    flex: 1;
+
+    height: 42px;
+
+    border-radius: 22px;
+
+    border: 1px solid #444;
+
+    background: #171717;
+
+    color: #ddd;
+
+    cursor: pointer;
+
+}
+
+.size-option.active {
+
+    background: #f4c35b;
+
+    color: #111;
+
+    border-color: #f4c35b;
+
+}
+
+
+/* ================= EXTRAS ================= */
+
+.extra-option {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 8px 0;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+}
+
+.extra-option span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+.extra-option input {
+
+    width: 18px;
+    height: 18px;
+
+    accent-color: #f4c35b;
+
+}
+
+.extra-option strong {
+
+    color: #ddd;
+
+    font-weight: 500;
+
+}
+
+
+/* ================= QUANTITY ================= */
+
+.quantity-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 25px 0;
+
+}
+
+.quantity-box button {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid #555;
+
+    background: #222;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+.quantity-box span {
+
+    min-width: 25px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+/* ================= ADD TO CART ================= */
+
+.add-to-cart-btn {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        135deg,
+        #f7cf6b,
+        #dca936
+    );
+
+    color: #111;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 25px;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+}
+
+.add-to-cart-btn strong {
+
+    font-size: 16px;
+
+}
+/* =====================================================
+   ARABIC
+===================================================== */
+
+html[dir="rtl"] .products-header {
+
+    flex-direction: row-reverse;
+
+}
+
+
+html[dir="rtl"] .products-title-area {
+
+    text-align: right;
+
+}
+
+
+html[dir="rtl"] .products-back-btn {
+
+    transform: rotate(180deg);
+
+}
+
+
+html[dir="rtl"] .product-card {
+
+    direction: rtl;
+
+}
+
+
+html[dir="rtl"] .product-info {
+
+    text-align: right;
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .products-modal-content {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+    .product-image {
+
+        width: 78px;
+
+        height: 78px;
+
+    }
+
+    .product-info h3 {
+
+        font-size: 13px;
+
+    }
+
+    .product-description {
+
+        font-size: 9px;
+
+    }
+
+    .product-price {
+
+        font-size: 12px;
+
+    }
+
+}
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .menu-modal-content {
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .categories-grid {
+
+        gap: 8px;
+    }
+
+    #menuModalTitle {
+
+        font-size: 28px;
+    }
+
+    .category-info h3 {
+
+        font-size: 13px;
+    }
+
+    .category-info span {
+
+        font-size: 8px;
+    }
+
+    .close-menu-modal {
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 20px;
+    }
+
+    .bottom-nav {
+
+        width: 430px;
+
+    }
+
+    #homePage {
+    padding-bottom: 90px;
+}
+
+.menu-modal-content {
+    padding-bottom: 100px;
+}
+}
+/* =====================================================
+   CART MODAL
+===================================================== */
+
+.cart-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    display: none;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+}
+
+
+.cart-modal.open {
+
+    display: block;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.cart-modal-content {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #111;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.cart-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+}
+
+
+.cart-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+}
+
+
+.cart-close {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d8a928;
+
+    background: transparent;
+
+    color: #d8a928;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   CLEAR ALL
+========================= */
+
+.clear-cart-btn {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-bottom: 15px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #d8a928;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   CART ITEMS
+========================= */
+
+.cart-items {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.cart-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    background: #1a1a1a;
+
+    border: 1px solid #292929;
+
+    border-radius: 12px;
+
+}
+
+
+.cart-item-image {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.cart-item-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.cart-item-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.cart-item-name {
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+
+}
+
+
+.cart-item-options {
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.cart-item-price {
+
+    color: #eabf45;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+.cart-item-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 7px;
+
+}
+
+
+.cart-quantity-btn {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    border: 1px solid #555;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.cart-quantity {
+
+    color: white;
+
+    min-width: 18px;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.cart-remove-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.cart-summary {
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #333;
+
+}
+
+
+.cart-summary > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+}
+
+
+.cart-summary strong {
+
+    color: white;
+
+}
+
+
+.cart-summary .cart-total {
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #333;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.cart-summary .cart-total strong {
+
+    color: #eabf45;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================
+   ORDER TYPE
+========================= */
+
+.order-type-section {
+
+    margin-top: 25px;
+
+}
+
+
+.order-type-section h3 {
+
+    color: white;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.order-type-buttons {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.order-type-btn {
+
+    flex: 1;
+
+    padding: 10px 5px;
+
+    border-radius: 20px;
+
+    border: 1px solid #444;
+
+    background: #191919;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.order-type-btn.active {
+
+    background: #eabf45;
+
+    color: #111;
+
+    border-color: #eabf45;
+
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-section {
+
+    margin-top: 20px;
+
+}
+
+
+.table-section label {
+
+    display: block;
+
+    color: white;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.table-section input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    background: #191919;
+
+    color: white;
+
+    outline: none;
+
+}
+
+
+.table-section input:focus {
+
+    border-color: #eabf45;
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-order-btn {
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/* =========================
+   EMPTY CART
+========================= */
+
+.empty-cart {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #888;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   ARABIC
+========================= */
+
+body.arabic .cart-modal-content {
+
+    direction: rtl;
+
+}
+
+body.arabic .cart-header {
+
+    direction: rtl;
+
+}
+
+body.arabic .cart-item {
+
+    direction: rtl;
+
+}
+/* =====================================================
+   SEARCH MODAL
+===================================================== */
+
+.search-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #080808;
+
+    z-index: 15000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    overflow-y: auto;
+}
+
+
+/* عندما يفتح البحث */
+
+.search-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* محتوى البحث */
+
+.search-modal-content {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 18px 14px 100px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #0b0b0b 45%,
+            #080808 100%
+        );
+
+}
+
+
+/* =====================================================
+   SEARCH HEADER
+===================================================== */
+
+.search-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    height: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.search-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+/* زر الإغلاق */
+
+.search-close {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+
+    background: #151515;
+
+    color: #d9a83f;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input-box {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 52px;
+
+    background: #151515;
+
+    border: 1px solid #383838;
+
+    border-radius: 14px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 20px;
+
+}
+
+
+.search-input-box:focus-within {
+
+    border-color: #d9a83f;
+
+    box-shadow:
+        0 0 0 1px rgba(217, 168, 63, 0.15);
+
+}
+
+
+.search-input-icon {
+
+    color: #d9a83f;
+
+    font-size: 23px;
+
+    margin-right: 10px;
+
+}
+
+
+.search-input-box input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+}
+
+
+.search-input-box input::placeholder {
+
+    color: #777;
+
+}
+
+
+/* زر مسح البحث */
+
+.clear-search {
+
+    width: 28px;
+
+    height: 28px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #292929;
+
+    color: #aaa;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: none;
+
+}
+
+
+.clear-search.show {
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   SEARCH RESULTS
+===================================================== */
+
+.search-results {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+/* =====================================================
+   SEARCH RESULT ITEM
+===================================================== */
+
+.search-result-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    background: #111111;
+
+    border: 1px solid #252525;
+
+    border-radius: 14px;
+
+}
+
+
+.search-result-image {
+
+    width: 68px;
+
+    height: 68px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.search-result-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.search-result-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.search-result-info h3 {
+
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.search-result-info p {
+
+    margin: 0 0 5px;
+
+    color: #888;
+
+    font-size: 11px;
+
+}
+
+
+.search-result-price {
+
+    color: #d9a83f;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* زر + */
+
+.search-result-add {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d9a83f;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #d9a83f;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+.search-result-add:active {
+
+    transform: scale(0.9);
+
+    background: #d9a83f;
+
+    color: #000;
+
+}
+
+
+/* =====================================================
+   EMPTY SEARCH
+===================================================== */
+
+.search-empty {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #777;
+
+}
+
+
+.search-empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+
+    color: #d9a83f;
+
+    font-size: 30px;
+
+}
+
+
+.search-empty h3 {
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+}
+
+
+.search-empty p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.search-no-results {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
+
+
+.search-no-results h3 {
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+}
+
+
+.search-no-results p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+/* =====================================================
+   HOURS MODAL
+===================================================== */
+
+.hours-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.25s ease;
+
+}
+
+
+.hours-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+.hours-box {
+
+    position: relative;
+
+    width: calc(100% - 50px);
+
+    max-width: 340px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #151515;
+
+    border: 1px solid #d9a83f;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+}
+
+
+.hours-close {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: 1px solid #d9a83f;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #d9a83f;
+
+    font-size: 20px;
+
+}
+
+
+.hours-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.hours-title {
+
+    color: #d9a83f;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hours-time {
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+}
+
+/* =====================================================
+   HOURS MODAL
+===================================================== */
+
+.hours-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* لما ينفتح */
+
+.hours-modal.show {
+
+    display: flex;
+
+}
+
+
+/* الصندوق */
+
+.hours-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    padding: 30px 25px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #21180d 0%,
+            #0b0906 45%,
+            #050505 100%
+        );
+
+    border: 1px solid #6f5118;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.7),
+        0 0 30px rgba(205,160,55,0.08);
+
+    animation: hoursModalIn 0.25s ease;
+}
+
+
+/* حركة الظهور */
+
+@keyframes hoursModalIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px) scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* زر الإغلاق */
+
+.hours-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    border: 1px solid #765617;
+
+    background: #090806;
+
+    color: #e5b85c;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* TASTE */
+
+.hours-small-title {
+
+    margin-bottom: 8px;
+
+    color: #e5b85c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* العنوان */
+
+.hours-box h3 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+}
+
+
+/* الخط الذهبي */
+
+.hours-line {
+
+    width: 45px;
+
+    height: 2px;
+
+    margin: 15px auto 20px;
+
+    background: #e5b85c;
+
+}
+
+
+/* الوقت */
+
+.hours-time {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.hours-time span {
+
+    color: #a9a9a9;
+
+    font-size: 12px;
+
+}
+
+
+.hours-time strong {
+
+    color: #e5b85c;
+
+    font-size: 20px;
+
+}
+
+
+/* الجملة الأخيرة */
+
+.hours-status {
+
+    margin-top: 20px;
+
+    color: #d0d0d0;
+
+    font-size: 12px;
+
+}
+
+.opening-hours-time {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: center;
+}
